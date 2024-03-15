@@ -15,3 +15,9 @@ function Input(props) {
         placeholder={props.placeholder}
       ></input>
     </div>
+  );
+}
+
+export default Input;
+
+//
