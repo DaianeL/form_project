@@ -1,14 +1,16 @@
 import Label from "../Label";
 
 function MenuSuspenso(props) {
-  
   return (
     <div>
-      <Label label="Menu de opções" />
-      <select required={props.obrigatorio} className="border-2  hover:bg-blue-100 w-full mb-2 rounded">
-        
+      <Label label="Cursos" />
+      <select
+        onChange={(evento) => props.inputAlterado(evento.target.value)}
+        required={props.obrigatorio}
+        className="text-md border-2 hover:bg-blue-100 w-full mb-2 rounded"
+      >
         {props.cursos.map((item) => (
-          <option key={item} >{item}</option>
+          <option key={item}>{item}</option>
         ))}
       </select>
     </div>
