@@ -33,7 +33,7 @@ function Formulario() {
   }
 
   return (
-    <div className=" p-20 h-screen w-100">
+    <div className=" p-20  w-100">
       <form
         onSubmit={Enviar}
         className="shadow-2xl flex flex-col p-4 bg-slate-100 w-full h-96 rounded-xl"
@@ -63,12 +63,11 @@ function Formulario() {
           inputAlterado={(valor) => setNascimeto(valor)}
         />
         <MenuSuspenso
-         obrigatorio={true}
+          obrigatorio={true}
           cursos={Cursos}
-           valor={cursos}
-           inputAlterado={valor => setCursos(valor)}
-           
-           />
+          valor={cursos}
+          inputAlterado={(valor) => setCursos(valor)}
+        />
         <Botao obrigatorio={true}>Enviar</Botao>
       </form>
     </div>
